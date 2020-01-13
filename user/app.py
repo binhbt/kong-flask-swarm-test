@@ -7,7 +7,8 @@ randomid = uuid.uuid4()
 @app.route('/')
 def index():
     hostname = os.uname()[1]
-    time.sleep(0.5)
+    from time import sleep
+    sleep(0.5)
     return 'Container Hostname: ' + hostname + ' , ' + 'UUID: ' + str(randomid) + '\n'
 
 @app.route('/public')

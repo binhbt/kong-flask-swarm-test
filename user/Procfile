@@ -1,4 +1,4 @@
-api: gunicorn app:app --reload --threads 1 --workers=1 -b :5000
+api: gunicorn app:app --reload --threads 1 --workers=5 -b :5000
 # api: gunicorn wsgi:app --reload -k gevent --worker-connections 1000 --workers=3 -b :5000
 # project_worker: celery -A app.main.worker.tasks worker -l info -f log/worker.log -n run_project_worker@%h -Q run_project_queue -c 6
 # notify_done_worker: celery -A app.main.worker.tasks worker -c 2 -l info -f log/worker.log -n notify_done_worker@%h -Q notify_done_queue

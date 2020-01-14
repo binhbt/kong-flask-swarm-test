@@ -10,4 +10,5 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-CMD python app.py
+# CMD python app.py
+CMD ["honcho", "start"]
